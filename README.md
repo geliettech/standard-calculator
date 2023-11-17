@@ -1,1 +1,1 @@
-﻿# Build a Responsive Real-time Standard calculator | HTML, CSS, & Javascript
+﻿# Understanding and Building a Simple Real-time Web Calculator | HTML, CSS, & Javascript

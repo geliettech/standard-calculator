@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information for the document -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Standard-Calculator</title>
-    <link rel="icon" href="./img/logo.png" />
+    <!-- Favicon and stylesheets -->
+    <link rel="icon" href="./img/icon.png" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- Calculator UI -->
     <div class="calculator">
+      <!-- Display for calculator input -->
       <input type="text" id="display" readonly />
       <br />
+      <!-- Calculator buttons with associated onclick functions -->
       S-Cal
       <button id="clearDisplay" onclick="clearDisplay()">C</button>
       <button onclick="solveDisplay('(')">(</button>
@@ -31,8 +36,10 @@
       <button onclick="solveDisplay('0')">0</button>
       <button onclick="solveDisplay('.')">.</button>
       <button onclick="solveDisplay('-')">-</button>
+      <!-- Button to calculate the result -->
       <button id="calculateResult" onclick="calculateResult()">=</button>
     </div>
+    <!-- Include the JavaScript file -->
     <script src="./js/script.js"></script>
   </body>
 </html>
