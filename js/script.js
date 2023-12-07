@@ -1,5 +1,32 @@
-// Get the display element
-let display = document.getElementById("display");
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the display element
+  let display = document.getElementById("display");
+
+  // Add event listeners for calculator buttons
+  document.getElementById("clearDisplay").addEventListener("click", clearDisplay);
+  document.getElementById("backSpace").addEventListener("click", Back);
+  document.getElementById("calculateResult").addEventListener("click", calculateResult);
+
+  // Add event listeners for digit buttons
+  document.querySelectorAll(".digit").forEach(function (button) {
+    button.addEventListener("click", function () {
+      appendDisplay(button.getAttribute("data-value"));
+    });
+  });
+
+  // Add event listeners for operator buttons
+  document.querySelectorAll(".operator").forEach(function (button) {
+    button.addEventListener("click", function () {
+      appendDisplay(button.getAttribute("data-value"));
+    });
+  });
+
+  // Add event listener for percentage button
+  document.getElementById("percentage").addEventListener("click", function () {
+    display.value = eval(display.value) / 100;
+  });
+});
 
 // Function to append the given value to the display
 const appendDisplay = (value) => {

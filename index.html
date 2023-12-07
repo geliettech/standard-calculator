@@ -1,3 +1,4 @@
+<!--index.html-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,9 @@
     <!-- Favicon and stylesheets -->
     <link rel="icon" href="./img/icon.png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Calculator UI -->
@@ -17,27 +21,29 @@
       <br />
       <!-- Calculator buttons with associated onclick functions -->
       S-Cal
-      <button id="clearDisplay" onclick="clearDisplay()">C</button>
-      <button onclick="appendDisplay('(')">(</button>
-      <button onclick="appendDisplay(')')">)</button>
-      <button onclick="Back()">&larr;</button>
-      <button onclick="appendDisplay('7')">7</button>
-      <button onclick="appendDisplay('8')">8</button>
-      <button onclick="appendDisplay('9')">9</button>
-      <button onclick="appendDisplay('/')">/</button>
-      <button onclick="appendDisplay('4')">4</button>
-      <button onclick="appendDisplay('5')">5</button>
-      <button onclick="appendDisplay('6')">6</button>
-      <button onclick="appendDisplay('*')">x</button>
-      <button onclick="appendDisplay('1')">1</button>
-      <button onclick="appendDisplay('2')">2</button>
-      <button onclick="appendDisplay('3')">3</button>
-      <button onclick="appendDisplay('+')">+</button>
-      <button onclick="appendDisplay('0')">0</button>
-      <button onclick="appendDisplay('.')">.</button>
-      <button onclick="appendDisplay('-')">-</button>
-      <!-- Button to calculate the result -->
-      <button id="calculateResult" onclick="calculateResult()">=</button>
+      <button id="clearDisplay">C</button>
+      <!-- <button class="operator" data-value="(">(</button>
+      <button class="operator" data-value=")">)</button> -->
+      <button class="operator" data-value="/">/</button>
+      <button class="operator" data-value="*">x</button>
+      <button id="backSpace">&larr;</button>
+      <button class="digit" data-value="7">7</button>
+      <button class="digit" data-value="8">8</button>
+      <button class="digit" data-value="9">9</button>
+      <button class="operator" data-value="-">-</button>
+      <button class="digit" data-value="4">4</button>
+      <button class="digit" data-value="5">5</button>
+      <button class="digit" data-value="6">6</button>
+      <button class="operator" data-value="+">+</button>
+      <button class="digit" data-value="1">1</button>
+      <button class="digit" data-value="2">2</button>
+      <button class="digit" data-value="3">3</button>
+       <!-- Button to calculate the result -->
+       <button id="calculateResult">=</button>
+       <button id="percentage">%</button>
+      <button class="digit" data-value="0">0</button>
+      <button class="digit" data-value=".">.</button>
+     
     </div>
     <!-- Include the JavaScript file -->
     <script src="./js/script.js"></script>
