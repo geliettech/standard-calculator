@@ -5,19 +5,16 @@
   --pastelblue: #f1f4ff;
   --SeaGreen: #2e8b57;
   --black: #000;
-  --fontsize: 18px;
+  --fontsize: 1.2em;
   --fontweight: 400;
-  --fontfamily: 'Poppins', sans-serif;
+  --fontfamily: "Poppins", sans-serif;
   --displygrid: grid;
 }
-/* Reset styles and global styling */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-/* Styling for the body */
 body {
   display: var(--displygrid);
   place-items: center;
@@ -28,35 +25,29 @@ body {
   font-size: var(--fontsize);
   font-weight: var(--fontweight);
 }
-
-/* Styling for the calculator container */
 .calculator {
   background-color: var(--SeaGreen);
   display: var(--displygrid);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   max-width: 350px;
-  height: 450px;
+  height: 480px;
   border-radius: 8px;
   padding: 12px;
   z-index: 1;
 }
-
-/* Styling for the calculator display */
 #display {
   grid-column: span 3;
   padding: 18px 12px;
-  font-size: 1.5em;
+  font-size: var(--fontsize);
   text-align: right;
   margin-bottom: 18px;
   border: none;
   outline: none;
 }
-
-/* Styling for calculator buttons */
 button {
-  padding: 10px;
-  font-size: 1.2em;
+  padding: 8px;
+  font-size: var(--fontsize);
   cursor: pointer;
   background-color: var(--black);
   color: var(--white);
@@ -64,12 +55,10 @@ button {
   border-radius: 4px;
 }
 
-/* Styling for the clear Display button */
 #clearDisplay {
   background-color: var(--darkred);
 }
 
-/* Styling for the calculate result button  */
 #calculateResult {
   background-color: var(--darkgreen);
   grid-row: span 2;

@@ -1,29 +1,24 @@
-<!--index.html-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta information for the document -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple-Calculator</title>
-    <!-- Favicon and stylesheets -->
     <link rel="icon" href="./img/icon.png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- Calculator UI -->
     <div class="calculator">
-      <!-- Display for calculator input -->
       <input type="text" id="display" readonly />
       <br />
-      <!-- Calculator buttons with associated onclick functions -->
       S-Cal
       <button id="clearDisplay">C</button>
-      <!-- <button class="operator" data-value="(">(</button>
-      <button class="operator" data-value=")">)</button> -->
       <button class="operator" data-value="/">/</button>
       <button class="operator" data-value="*">x</button>
       <button id="backSpace">&larr;</button>
@@ -38,14 +33,11 @@
       <button class="digit" data-value="1">1</button>
       <button class="digit" data-value="2">2</button>
       <button class="digit" data-value="3">3</button>
-       <!-- Button to calculate the result -->
-       <button id="calculateResult">=</button>
-       <button id="percentage">%</button>
+      <button id="calculateResult">=</button>
+      <button id="percentage">%</button>
       <button class="digit" data-value="0">0</button>
       <button class="digit" data-value=".">.</button>
-     
     </div>
-    <!-- Include the JavaScript file -->
     <script src="./js/script.js"></script>
   </body>
 </html>

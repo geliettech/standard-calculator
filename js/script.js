@@ -1,55 +1,47 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the display element
   let display = document.getElementById("display");
+  let clearAll = document.getElementById("clearDisplay");
+  let backSpace = document.getElementById("backSpace");
+  let calculate = document.getElementById("calculateResult");
+  let percentage = document.getElementById("percentage");
+  let digit = document.querySelectorAll(".digit");
+  let operator = document.querySelectorAll(".operator");
 
-  // Add event listeners for calculator buttons
-  document.getElementById("clearDisplay").addEventListener("click", clearDisplay);
-  document.getElementById("backSpace").addEventListener("click", Back);
-  document.getElementById("calculateResult").addEventListener("click", calculateResult);
+  clearAll.addEventListener("click", clearDisplay);
+  backSpace.addEventListener("click", Back);
+  calculate.addEventListener("click", calculateResult);
+  percentage.addEventListener("click", percent);
 
-  // Add event listeners for digit buttons
-  document.querySelectorAll(".digit").forEach(function (button) {
-    button.addEventListener("click", function () {
-      appendDisplay(button.getAttribute("data-value"));
-    });
-  });
-
-  // Add event listeners for operator buttons
-  document.querySelectorAll(".operator").forEach(function (button) {
-    button.addEventListener("click", function () {
-      appendDisplay(button.getAttribute("data-value"));
-    });
-  });
-
-  // Add event listener for percentage button
-  document.getElementById("percentage").addEventListener("click", function () {
-    display.value = eval(display.value) / 100;
-  });
+  digit.forEach(dataValue);
+  operator.forEach(dataValue);
 });
 
-// Function to append the given value to the display
 const appendDisplay = (value) => {
   display.value += value;
 };
 
-// Function to clear the display
+const percent = () => {
+  display.value = eval(display.value) / 100;
+};
+
 const clearDisplay = () => {
   display.value = "";
 };
 
-// Function to remove the last character from the display
 const Back = () => {
   display.value = display.value.slice(0, -1);
 };
 
-// Function to calculate and display the result
+const dataValue = (button) => {
+  button.addEventListener("click", function () {
+    appendDisplay(button.getAttribute("data-value"));
+  });
+};
+
 const calculateResult = () => {
   try {
-    // Use eval to evaluate the expression and update the display
     display.value = eval(display.value);
   } catch (error) {
-    // Handle errors by displaying "Error"
     display.value = "Error";
   }
 };
