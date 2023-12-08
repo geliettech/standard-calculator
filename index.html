@@ -8,7 +8,7 @@
     <title>Simple-Calculator</title>
     <!-- Favicon link -->
     <link rel="icon" href="./img/icon.png" />
-    <!-- External CSS file for styling -->
+    <!-- stylesheet link -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Preconnect links for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,17 +20,17 @@
     />
   </head>
   <body>
-    <!-- Calculator container -->
+   <!-- Calculator layout -->
     <div class="calculator">
       <!-- Display input field -->
       <input type="text" id="display" readonly />
       <br />
 
       S-Cal
-      <!-- Calculator buttons -->
+      <!-- Calculator buttons with specific IDs, various classes and data attributes -->
       <button id="clearDisplay">C</button>
-      <button class="operator" data-value="/">/</button>
-      <button class="operator" data-value="*">x</button>
+      <button class="operator" data-value="/">&#247;</button>
+      <button class="operator" data-value="*">&times;</button>
       <button id="backSpace">&larr;</button>
       <button class="digit" data-value="7">7</button>
       <button class="digit" data-value="8">8</button>
@@ -48,6 +48,7 @@
       <button class="digit" data-value="0">0</button>
       <button class="digit" data-value=".">.</button>
     </div>
+   <!-- Script link for the JavaScript logic -->
     <script src="./js/script.js"></script>
   </body>
 </html>
