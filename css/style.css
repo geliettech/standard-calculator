@@ -6,10 +6,8 @@
   --pastelblue: #f1f4ff;
   --SeaGreen: #2e8b57;
   --black: #000;
-  --fontsize: 1.2em;
+  --fontsize: 1.1em;
   --fontweight: 400;
-  --fontfamily: "Poppins", sans-serif;
-  --displygrid: grid;
 }
 
 /* Resetting styles for all elements */
@@ -21,44 +19,47 @@
 
 /* Body styling */
 body {
-  display: var(--displygrid);
+  display: grid;
   place-items: center;
   height: 100vh;
   color: var(--white);
   background-color: var(--pastelblue);
-  font-family: var(--fontfamily);
-  font-size: var(--fontsize);
-  font-weight: var(--fontweight);
+  font-family: "Poppins", sans-serif;
 }
 
 /* Calculator styling */
 .calculator {
   background-color: var(--SeaGreen);
-  display: var(--displygrid);
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   max-width: 350px;
   height: 480px;
   border-radius: 8px;
   padding: 12px;
+  margin: 8px;
   z-index: 1;
+  font-size: var(--fontsize);
+  font-weight: var(--fontweight);
 }
 
 /* Display input styling */
 #display {
   grid-column: span 3;
   padding: 18px 12px;
-  font-size: var(--fontsize);
   text-align: right;
   margin-bottom: 18px;
   border: none;
   outline: none;
+  font-size: var(--fontsize);
+  font-weight: var(--fontweight);
 }
 
 /* Common styling for all buttons */
 button {
   padding: 8px;
   font-size: var(--fontsize);
+  font-weight: var(--fontweight);
   cursor: pointer;
   background-color: var(--black);
   color: var(--white);
