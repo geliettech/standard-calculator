@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   backSpace.addEventListener("click", Back);
   clearAll.addEventListener("click", clearDisplay);
   calculate.addEventListener("click", calculateResult);
+
+  // toggle
+  document.getElementById("toggle-theme").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
 });
 
 let display = document.getElementById("display");
